@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/simple.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/socket.io.slim.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="#">Dashboard</a>
+      </nav>
+    </div>
+    <div class="container-fluid">   
+      <div class="row">
+          <div class="col-md-2">
+              <ul class="nav nav-pills flex-column sidebar">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Browse Maps<span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">My Maps</a>
+                  </li>
+                </ul>
+          </div>
+          <div class="col-md-10" style="height:100%">
+              <div class="card">
+                  <div class="card-body" style="height:100%"> 
+                      <ul class="nav justify-content-center">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Add Marker</a>
+                          </li>
+                      </ul>
+                      <div id="map"></div>
+                  </div>
+                </div>
+                <div id="marker-alert" class="alert alert-success" role="alert" style="display:none">
+                  New Marker Added!
+                </div>            
+          </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <!-- <script src=".\node_modules\popper.js\dist\popper.min.js"></script> -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/restapi.js"></script>
+    <script src="./js/socketio.api.js"></script>
+    <!-- <script src="./node_modules/socket.io-client/dist/socket.io.js"></script> -->
+    <script src="./js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxVHLbMJQxofyadngJdJdbAVvFVnFBMUY&callback=initMap" async defer></script>
+  </body>
+</html>
