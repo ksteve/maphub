@@ -8,7 +8,8 @@ socketClient.on('addMarker', function(marker){
     console.log("add marker recieved");    
     var newMarker = new google.maps.Marker(
         {
-          position: marker.position
+          position: marker.position,
+          animation: google.maps.Animation.DROP
         });
 
     newMarker.setMap(map);
