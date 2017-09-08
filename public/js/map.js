@@ -1,6 +1,13 @@
-  var map;
-  
-  function initMap() {
+
+const loadGoogleMapsAPI = require('load-google-maps-api');
+
+loadGoogleMapsAPI().then(function(googleMaps) {
+  console.log(googleMaps) //=> Object { Animation: Object, ...
+}).catch((err) => {
+  console.error(err)
+})
+ 
+function initMap() {
       // var socket = io();
       var icon = "./marker_2.png"
 
